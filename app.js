@@ -1,48 +1,16 @@
-const a = document.querySelectorAll('input')[0]
-const b = document.querySelectorAll('input')[1]
-const add = document.querySelector('#add')
-const multiply = document.querySelector('#multiply')
-const resultBox = document.querySelector('.result')
-
-const sum = () => {
-    const result = parseInt(a.value) + parseInt(b.value)
-    resultBox.innerHTML = result
-}
-
-const product = () => {
-    const result = parseInt(a.value) * parseInt(b.value)
-    resultBox.innerHTML = result
-}
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
 
 
-const calculate = (event, operation) => {
-   
-    // if (operation == 'add') {
-        // console.log('adding')
-    // } else if (operation == 'multiply') {
-        // console.log('multiply')
-    // }
-    switch(operation){
-    case "add":
-      resultBox.innerHTML=parseInt(a.value)=parseInt(b.value)
-      break
-    case "multiply":
-      resultBox.innerHTML=parseInt(a.value)=parseInt(b.value)
-      break
-    case "subtract":
-        resultBox.innerHTML=parseInt(a.value)=parseInt(b.value)
-        break  
-    default:
-      resultBox.innerHTML="not a valid operation"
-    }
+const callbackfunc = (event) => {
+    // console.log(input.value)
+    const inputValue = input.value
+    const element = document.createElement('li')
+    const textNode = document.createTextNode(inputValue)
+    element.appendChild(textNode)
+    list.appendChild(element)
 }
 
 
-add.addEventListener('click', (event) => {
-    calculate(event, 'add')
-})
-
-
-multiply.addEventListener('click', (event) => {
-    calculate(event, 'multiply')
-})
+button.addEventListener('click', callbackfunc)

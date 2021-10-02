@@ -1,16 +1,13 @@
-var button = document.querySelector('button')
-var input = document.querySelector('input')
-var list = document.querySelector('ul')
+var heading = document.getElementById('heading')
+var para = document.getElementsByClassName('para')
+var tag = document.getElementsByTagName('a')
+var query = document.querySelector('.para')
 
+//console.log(heading)
+// console.log(para.length)
+// console.log(para[0])
+// console.log(para[1])
 
-const callbackfunc = (event) => {
-    // console.log(input.value)
-    const inputValue = input.value
-    const element = document.createElement('li')
-    const textNode = document.createTextNode(inputValue)
-    element.appendChild(textNode)
-    list.appendChild(element)
-}
+// para.push('asdf')
 
-
-button.addEventListener('click', callbackfunc)
+console.log(query)
